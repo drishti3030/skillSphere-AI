@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://skillsphere-ai-backend.onrender.com/api';
+
 const client = axios.create({
-  baseURL: '/api',
+  baseURL: BASE_URL,
   timeout: 15000,
   headers: { 'Content-Type': 'application/json' }
 });
